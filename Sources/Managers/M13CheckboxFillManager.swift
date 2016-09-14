@@ -177,7 +177,7 @@ internal class M13CheckboxFillManager: M13CheckboxManager {
                     
                     CATransaction.commit()
                 }
-
+                
             }
         }
     }
@@ -237,4 +237,3 @@ internal class M13CheckboxFillManager: M13CheckboxManager {
     }
     
 }
-

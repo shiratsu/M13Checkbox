@@ -58,10 +58,10 @@ internal class M13CheckboxManager {
     //----------------------------
     
     /**
-    Animates the layers between the two states.
-    - parameter fromState: The previous state of the checkbox.
-    - parameter toState: The new state of the checkbox.
-    */
+     Animates the layers between the two states.
+     - parameter fromState: The previous state of the checkbox.
+     - parameter toState: The new state of the checkbox.
+     */
     func animate(fromState: M13Checkbox.CheckState, toState: M13Checkbox.CheckState) {
         state = toState
     }
@@ -80,9 +80,9 @@ internal class M13CheckboxManager {
     //----------------------------
     
     /**
-    Reset the layers to be in the given state.
-    - parameter state: The new state of the checkbox.
-    */
+     Reset the layers to be in the given state.
+     - parameter state: The new state of the checkbox.
+     */
     func resetLayersForState(state: M13Checkbox.CheckState) {
         self.state = state
         layoutLayers()

@@ -46,31 +46,31 @@ internal class M13CheckboxSpiralPathPresets: M13CheckboxPathPresets {
         return path
     }
     
-    /** 
-    Creates a path object for the long radio mark.
-    - returns: A `UIBezierPath` representing the radio mark.
-    */
+    /**
+     Creates a path object for the long radio mark.
+     - returns: A `UIBezierPath` representing the radio mark.
+     */
     func pathForLongRadioMark() -> UIBezierPath {
         return pathForBox()
     }
     
     final func pathForLongMark(state: M13Checkbox.CheckState) -> UIBezierPath {
-            switch state {
-            case .Unchecked:
-                if markType == .Checkmark {
-                    return pathForLongCheckmark()
-                } else {
-                    return pathForLongRadioMark()
-                }
-            case .Checked:
-                if markType == .Checkmark {
-                    return pathForLongCheckmark()
-                } else {
-                    return pathForLongRadioMark()
-                }
-            case .Mixed:
-                return pathForLongMixedMark()
+        switch state {
+        case .Unchecked:
+            if markType == .Checkmark {
+                return pathForLongCheckmark()
+            } else {
+                return pathForLongRadioMark()
             }
+        case .Checked:
+            if markType == .Checkmark {
+                return pathForLongCheckmark()
+            } else {
+                return pathForLongRadioMark()
+            }
+        case .Mixed:
+            return pathForLongMixedMark()
+        }
     }
     
 }

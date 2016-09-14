@@ -170,7 +170,7 @@ internal class M13CheckboxStrokeManager: M13CheckboxManager {
                     CATransaction.setCompletionBlock({ [unowned self] () -> Void in
                         self.resetLayersForState(self.state)
                         })
-
+                    
                     markLayer.addAnimation(compressionAnimation!, forKey: "path")
                     
                     CATransaction.commit()

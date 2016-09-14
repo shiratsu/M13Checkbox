@@ -76,7 +76,7 @@ internal class M13CheckboxAnimationPresets {
         }
         return animation
     }
-
+    
     //----------------------------
     // MARK: - Animation Component Generation
     //----------------------------
@@ -188,4 +188,3 @@ internal class M13CheckboxAnimationPresets {
         return animation
     }
 }
-

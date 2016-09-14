@@ -203,7 +203,7 @@ internal class M13CheckboxBounceManager: M13CheckboxManager {
                     
                     CATransaction.commit()
                 }
-
+                
             }
         }
     }
@@ -274,5 +274,4 @@ internal class M13CheckboxBounceManager: M13CheckboxManager {
     }
     
 }
-
 

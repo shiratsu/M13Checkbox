@@ -221,7 +221,7 @@ internal class M13CheckboxSpiralManager: M13CheckboxManager {
                     
                     CATransaction.commit()
                 }
-
+                
             }
         }
     }
@@ -290,4 +290,3 @@ internal class M13CheckboxSpiralManager: M13CheckboxManager {
     }
     
 }
-

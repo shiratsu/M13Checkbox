@@ -126,7 +126,7 @@ internal class M13CheckboxFadeManager: M13CheckboxManager {
         super.animate(fromState, toState: toState)
         
         if toState == .Unchecked {
-
+            
             let opacityAnimation = animations.opacityAnimation(true)
             
             CATransaction.begin()
@@ -195,7 +195,7 @@ internal class M13CheckboxFadeManager: M13CheckboxManager {
                     
                     CATransaction.commit()
                 }
-
+                
             }
         }
     }

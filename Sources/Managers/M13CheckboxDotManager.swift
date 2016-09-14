@@ -83,7 +83,7 @@ internal class M13CheckboxDotManager: M13CheckboxManager {
         unselectedBoxLayer.rasterizationScale = UIScreen.mainScreen().scale
         unselectedBoxLayer.shouldRasterize = true
         unselectedBoxLayer.actions = newActions
-
+        
         unselectedBoxLayer.transform = CATransform3DIdentity
         unselectedBoxLayer.fillColor = nil
         
@@ -281,4 +281,3 @@ internal class M13CheckboxDotManager: M13CheckboxManager {
     }
     
 }
-
