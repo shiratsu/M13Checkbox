@@ -41,20 +41,28 @@ internal class M13CheckboxStrokeManager: M13CheckboxManager {
     
     override init() {
         // Disable som implicit animations.
-        let newActions = [
-            "opacity": NSNull(),
-            "strokeEnd": NSNull(),
-            "transform": NSNull(),
-            "fillColor": NSNull(),
-            "path": NSNull(),
-            "lineWidth": NSNull()
-        ]
+        
+        var newActions: [String:Any]? = [:]
+        
+        if #available(iOS 9.0, *){
+            newActions = [
+                "opacity": NSNull(),
+                "strokeEnd": NSNull(),
+                "transform": NSNull(),
+                "fillColor": NSNull(),
+                "path": NSNull(),
+                "lineWidth": NSNull()
+            ]
+
+        }
+        
+        
         
         // Setup the unselected box layer
         unselectedBoxLayer.lineCap = kCALineCapRound
         unselectedBoxLayer.rasterizationScale = UIScreen.main.scale
         unselectedBoxLayer.shouldRasterize = true
-        unselectedBoxLayer.actions = newActions
+        unselectedBoxLayer.actions = (newActions as? [String : CAAction]?) ?? [:]
         
         unselectedBoxLayer.opacity = 1.0
         unselectedBoxLayer.strokeEnd = 1.0
@@ -65,7 +73,7 @@ internal class M13CheckboxStrokeManager: M13CheckboxManager {
         selectedBoxLayer.lineCap = kCALineCapRound
         selectedBoxLayer.rasterizationScale = UIScreen.main.scale
         selectedBoxLayer.shouldRasterize = true
-        selectedBoxLayer.actions = newActions
+        selectedBoxLayer.actions = (newActions as? [String : CAAction]?) ?? [:]
         
         selectedBoxLayer.transform = CATransform3DIdentity
         selectedBoxLayer.fillColor = nil
@@ -75,7 +83,7 @@ internal class M13CheckboxStrokeManager: M13CheckboxManager {
         markLayer.lineJoin = kCALineJoinRound
         markLayer.rasterizationScale = UIScreen.main.scale
         markLayer.shouldRasterize = true
-        markLayer.actions = newActions
+        markLayer.actions = (newActions as? [String : CAAction]?) ?? [:]
         
         markLayer.transform = CATransform3DIdentity
         markLayer.fillColor = nil
