@@ -25,7 +25,7 @@ internal class M13CheckboxPathPresets {
     struct CheckmarkProperties {
         
         /// The angle between the x-axis, and the line created between the origin, and the location where the extended long arm of the checkmark meets the box. (Diagram: Θ)
-        var longArmBoxIntersectionAngle: CGFloat = 45.0 * CGFloat(M_PI / 180.0)
+        var longArmBoxIntersectionAngle: CGFloat = 45.0 * CGFloat(Double.pi / 180.0)
         
         /// The distance from the center the long arm of the checkmark draws to, as a percentage of size. (Diagram: S)
         var longArmRadius: (circle: CGFloat, box: CGFloat) = (circle: 0.22, box: 0.33)
@@ -182,7 +182,7 @@ internal class M13CheckboxPathPresets {
         return UIBezierPath(arcCenter: CGPoint(x: radius, y: radius),
                             radius: radius,
                             startAngle: -checkmarkProperties.longArmBoxIntersectionAngle,
-                            endAngle: CGFloat(2 * M_PI) - checkmarkProperties.longArmBoxIntersectionAngle,
+                            endAngle: CGFloat(2 * Double.pi) - checkmarkProperties.longArmBoxIntersectionAngle,
                             clockwise: true)
     }
     
@@ -201,7 +201,7 @@ internal class M13CheckboxPathPresets {
         if cornerRadius != 0 {
             path.addArc(withCenter: tr,
                                   radius: cornerRadius,
-                                  startAngle: CGFloat(-M_PI_4),
+                                  startAngle: CGFloat(-Double.pi / 4),
                                   endAngle: 0.0,
                                   clockwise: true)
         }
@@ -213,7 +213,7 @@ internal class M13CheckboxPathPresets {
             path.addArc(withCenter: br,
                                   radius: cornerRadius,
                                   startAngle: 0.0,
-                                  endAngle: CGFloat(M_PI_2),
+                                  endAngle: CGFloat(Double.pi/2),
                                   clockwise: true)
         }
         // Bottom side.
@@ -222,8 +222,8 @@ internal class M13CheckboxPathPresets {
         if cornerRadius != 0 {
             path.addArc(withCenter: bl,
                                   radius: cornerRadius,
-                                  startAngle: CGFloat(M_PI_2),
-                                  endAngle: CGFloat(M_PI),
+                                  startAngle: CGFloat(Double.pi/2),
+                                  endAngle: CGFloat(Double.pi),
                                   clockwise: true)
         }
         // Left side.
@@ -232,8 +232,8 @@ internal class M13CheckboxPathPresets {
         if cornerRadius != 0 {
             path.addArc(withCenter: tl,
                                   radius: cornerRadius,
-                                  startAngle: CGFloat(M_PI),
-                                  endAngle: CGFloat(M_PI + M_PI_2),
+                                  startAngle: CGFloat(Double.pi),
+                                  endAngle: CGFloat(Double.pi + Double.pi/2),
                                   clockwise: true)
         }
         // Top side.
@@ -242,8 +242,8 @@ internal class M13CheckboxPathPresets {
         if cornerRadius != 0 {
             path.addArc(withCenter: tr,
                                   radius: cornerRadius,
-                                  startAngle: CGFloat(M_PI + M_PI_2),
-                                  endAngle: CGFloat(M_PI + M_PI_2 + M_PI_4),
+                                  startAngle: CGFloat(Double.pi + Double.pi/2),
+                                  endAngle: CGFloat(Double.pi + Double.pi/2 + Double.pi/4),
                                   clockwise: true)
         }
         path.close()
